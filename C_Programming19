@@ -1,0 +1,25 @@
+#include <stdio.h>
+void disp_lcm(int a, int b, int c)
+{
+    int max;
+    max = a;
+    if(b > max) max = b;
+    if(c > max) max = c;
+    while(1)
+    {
+        if(max % a == 0 && max % b == 0 && max % c == 0)
+        {
+            printf("LCM = %d", max);
+            break;
+        }
+        max++;
+    }
+}
+int main()
+{
+    int a, b, c;
+    printf("Enter three numbers: ");
+    scanf("%d%d%d", &a, &b, &c);
+    disp_lcm(a, b, c);
+    return 0;
+}

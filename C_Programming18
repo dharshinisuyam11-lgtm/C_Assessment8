@@ -1,0 +1,24 @@
+#include <stdio.h>
+void disp_lcm(int a, int b)
+{
+    int max, lcm;
+    max = (a > b) ? a : b;
+    while(1)
+    {
+        if(max % a == 0 && max % b == 0)
+        {
+            lcm = max;
+            break;
+        }
+        max++;
+    }
+    printf("LCM = %d", lcm);
+}
+int main()
+{
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    disp_lcm(a, b);
+    return 0;
+}

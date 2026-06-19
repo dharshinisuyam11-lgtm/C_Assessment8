@@ -1,0 +1,23 @@
+#include <stdio.h>
+void disp_two_digit_square()
+{
+    int i, count = 0;
+    for(i = 10; i <= 99; i++)
+    {
+        int j;
+        for(j = 1; j * j <= i; j++)
+        {
+            if(j * j == i)
+            {
+                count++;
+                break;
+            }
+        }
+    }
+    printf("Total two digit perfect square numbers = %d", count);
+}
+int main()
+{
+    disp_two_digit_square();
+    return 0;
+}
